@@ -13,11 +13,15 @@ const PORT = 3007;
 app.get('/', (req, res) => {
 
 
-    //res.send('is it working?');
+    //res.send('Job Board Description');
 
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+});
 
-    
+app.get('/post-form', (req, res) => {
+
+
+     res.sendFile(`${import.meta.dirname}/views/job-posting-form.html`);
+
 });
 
 // Start the server and listen on the specified port 
