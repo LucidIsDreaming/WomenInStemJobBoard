@@ -13,7 +13,7 @@ const PORT = 3007;
 app.get('/', (req, res) => {
 
 
-    res.send('Job Board Description');
+    res.sendFile(`${import.meta.dirname}/views/home.html`);
 
 });
 
