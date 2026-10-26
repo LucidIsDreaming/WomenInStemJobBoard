@@ -13,7 +13,14 @@ const PORT = 3007;
 app.get('/', (req, res) => {
 
 
-    res.send('Job Board Description');
+    //res.send('Job Board Description');
+
+});
+
+app.get('/post-form', (req, res) => {
+
+
+     res.sendFile(`${import.meta.dirname}/views/job-posting-form.html`);
 
 });
 
