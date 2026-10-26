@@ -1,3 +1,17 @@
+body {
+  background-color: rgb(220, 255, 221);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#main {
+    background-color: white;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem 2rem 1rem;
+}
+
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -9,6 +23,5 @@ td, th {
   text-align: left;
   padding: 8px;
 }
-body{
-    background-color: blue;
-}
+
+
