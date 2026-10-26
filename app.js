@@ -4,6 +4,9 @@ import express from 'express';
 // Create an instance of an Express application
 const app = express();
 
+app.use(express.static('pages'));
+
+
 // Define the port number where our server will listen
 const PORT = 3007;
 
@@ -13,7 +16,17 @@ const PORT = 3007;
 app.get('/', (req, res) => {
 
 
+
     res.sendFile(`${import.meta.dirname}/views/home.html`);
+
+    //res.send('Job Board Description');
+
+});
+
+app.get('/post-form', (req, res) => {
+
+
+     res.sendFile(`${import.meta.dirname}/views/job-posting-form.html`);
 
 });
 
