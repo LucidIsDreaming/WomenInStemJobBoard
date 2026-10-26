@@ -13,8 +13,11 @@ const PORT = 3007;
 app.get('/', (req, res) => {
 
 
-    res.send('Job Board Description');
+    //res.send('is it working?');
 
+    res.sendFile(`${import.meta.dirname}/views/home.html`);
+
+    
 });
 
 // Start the server and listen on the specified port 
