@@ -8,7 +8,7 @@
     <script src="scripts/trades.js" defer></script>
 </head>
 <body>
-                <form id="job-form" action="#" method="get">
+                <form id="job-form" action="/submit-job" method="post">
 
             <!-- contact info -->
              
@@ -32,8 +32,15 @@
                 <input type="text" id="location" name="location">
 
                 <!-- part or full time -->
-                 <label for="text">Part or full time</label>
-                <input type="radio" id="part-or-full" name="part-or-full">
+                 <label for="part-time">
+                    <input type="radio" id="part-time" name="part-time" value="part-time">
+                    Part TIme
+                </label>
+                <label for="full-time"
+                >
+                <input type="radio" id="full-time" name="full-time" value="full-time">
+                Full Time
+            </label>
 
                 <!-- date posted -->
                   <label for="text">Date posted</label>

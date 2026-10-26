@@ -9,6 +9,8 @@ app.use(express.static('pages'));
 
 // Define the port number where our server will listen
 const PORT = 3007;
+const jobs=[];
+app.use(express.urlencoded({ extended: true}));
 
 // Define a default "route" ('/')
 // req: contains information about the incoming request
@@ -36,6 +38,26 @@ app.get('/confirmation', (req, res) => {
 
      res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 
+});
+
+
+
+app.post('/submit-job', (req, res) => {
+    console.log(req.body);
+    const job = req.body;
+   // job['timestamp'] = new Date();
+    console.log(job);
+   
+   jobs.push(job);
+   
+
+   //Display confirmation page
+   res.sendFile(`${import.meta.dirname}/views/confirmation.html`)
+   
+});
+
+app.get('/admin', (req, res) => {
+    res.send(jobs);
 });
 
 // Start the server and listen on the specified port 
