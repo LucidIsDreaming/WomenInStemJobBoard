@@ -1,6 +1,21 @@
-body{
-    background-color: blue;
+body {
+  background-color: rgb(220, 255, 221);
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+#main {
+  background-color: rgb(38, 144, 22);
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem 2rem 1rem;
+}
+
+#header{
+  background-color: white;
+}
+
+
 table {
   font-family: arial, sans-serif;
   border-collapse: collapse;
@@ -12,3 +27,8 @@ th {
   text-align: left;
   padding: 8px;
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 957b23feea6515ad29bf4cfe9324452eb7e594cb

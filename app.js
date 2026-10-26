@@ -31,6 +31,13 @@ app.get('/post-form', (req, res) => {
 
 });
 
+app.get('/confirmation', (req, res) => {
+
+
+     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+
+});
+
 // Start the server and listen on the specified port 
 app.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
