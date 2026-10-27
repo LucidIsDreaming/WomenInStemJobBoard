@@ -15,9 +15,10 @@ const PORT = 3007;
 // res: allows us to send back a response to the client
 app.get('/', (req, res) => {
 
+res.sendFile(`${import.meta.dirname}/views/home.html`);
 
 
-    res.sendFile(`${import.meta.dirname}/views/home.html`);
+   
 
     //res.send('Job Board Description');
 
@@ -27,6 +28,13 @@ app.get('/post-form', (req, res) => {
 
 
      res.sendFile(`${import.meta.dirname}/views/job-posting-form.html`);
+
+});
+
+app.get('/confirmation', (req, res) => {
+
+
+     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 
 });
 

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Post a Job</title>
+    <link rel="stylesheet" href="styles/job-posting-form.css">
+    <script src="scripts/trades.js" defer></script>
 </head>
 <body>
                 <form id="job-form" action="#" method="get">
@@ -13,6 +15,7 @@
              <fieldset>
                 <legend>Create a job Post</legend>
                 <!-- job title -->
+                 <span class="err" id="err-job-title">Job Title Required </span>
                 <label for="Job Titile">Job Title:</label>
                 <input type="text" id="job-title" name="job-title">
                 
