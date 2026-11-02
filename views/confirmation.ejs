@@ -10,5 +10,20 @@
 </head>
 <body>
     <h>Job Posted!</h>
+
+    
+    <h2> Order Summary </h2>
+    <p>Job Title: <%= job.timestamp.toLocaleString() %></p>
+    <p>Company: <%= job.fname %> <%= job.lname %></p>
+    <p>Trade Area: <%= job.email %></p>
+    <p>Location: <%= job.method %> </p>
+    <p>Part time or Full time: <%= job.size %></p>
+    <p>Date Posted: <%= job.toppings %> </p>
+    <p>Expiration Date: <%= job.comment %> </p>
+    <p>Application URL: <%= job.comment %> </p>
+
+    <a href="/" class = "main-button">Back to Home Page</a>
+    <a href="/admin-data" class = "admin-data-button">See Recent Admin Data</a>
+
 </body>
 </html>
