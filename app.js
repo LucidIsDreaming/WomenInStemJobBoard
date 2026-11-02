@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 // res: allows us to send back a response to the client
 app.get('/', (req, res) => {
 
-res.sendFile(`${import.meta.dirname}/views/home.html`);
+res.render('home');
 
 
    
@@ -31,14 +31,14 @@ res.sendFile(`${import.meta.dirname}/views/home.html`);
 app.get('/post-form', (req, res) => {
 
 
-     res.sendFile(`${import.meta.dirname}/views/job-posting-form.html`);
+     res.render('job-posting-form');
 
 });
 
 app.get('/confirmation', (req, res) => {
 
 
-     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+     res.render('confirmation');
 
 });
 
@@ -54,7 +54,7 @@ app.post('/submit-job', (req, res) => {
    
 
    //Display confirmation page
-   res.sendFile(`${import.meta.dirname}/views/confirmation.html`)
+   res.render('confirmation');
    
 });
 
