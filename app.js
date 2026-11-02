@@ -57,7 +57,7 @@ app.post('/submit-job', (req, res) => {
    
 
    //Display confirmation page
-   res.render('confirmation');
+   res.render('confirmation',{job});
    
 });
 
