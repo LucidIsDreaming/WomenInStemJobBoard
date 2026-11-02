@@ -12,33 +12,38 @@
 </head>
 <body>
                 <form id="job-form" action="/submit-job" method="post">
+                   
+
+                   
 
             <!-- contact info -->
-             
+             <div id="form-body">
              <fieldset>
+                 <div id="form-title">
                 <legend>Create a job Post</legend>
+                </div>
                 <!-- job title -->
                  <span class="err" id="err-job-title">Job Title Required </span>
-                <label for="Job Titile">Job Title:</label>
-                <input type="text" id="job-title" name="job-title">
+                <legend for="job-title">Job Title:</legend>
+                <input type="text" id="job-title" name="job-title"> 
                 
                 <!-- Company name -->
                  <span class="err" id="err-company-name">Company Name Required</span>
-                <label for="company-name">Company Name:</label>
+                <legend for="company-name">Company Name:</legend>
                 <input type="text" id="company-name" name="company-name">
                 
                 <!-- Trade area -->
                  <span class="err" id="err-trade-area">Trade Program Required </span>
-                <label for="text">Trade Area</label>
+                <legend for="text">Trade Area</legend>
                 <input type="text" id="trade-area" name="trade-area">
 
                 <!-- location -->
                  <span class="err" id="err-location">Location Required</span>
-                 <label for="text">Location</label>
+                 <legend for="text">Location</legend>
                 <input type="text" id="location" name="location">
 
                 <!-- part or full time -->
-                 <label for="part-time">
+                 <legend for="part-time">
                     <input type="radio" id="part-time" name="part-time" value="part-time">
                     Part Time
                 </label>
@@ -46,21 +51,21 @@
                 >
                 <input type="radio" id="full-time" name="full-time" value="full-time">
                 Full Time
-            </label>
+                </legend>
 
                 <!-- date posted -->
                  <span class="err" id="err-date">Date Posted Required </span>
-                <label for="text">Date posted</label>
+                <legend for="text">Date posted</legend>
                 <input type="text" id="date-posted" name="date-posted">
 
                 <!-- date expires -->
                 <span class="err" id="err-exp">Expiration Date Required</span>
-                <label for="text">Expiration date</label>
+                <legend for="text">Expiration date</legend>
                 <input type="text" id="exp-date" name="exp-date">
 
                 <!-- application url -->
                 <span class="err" id="err-app-url">Application URL Required </span>
-                  <label for="text">Application URL</label>
+                  <legend for="text">Application URL</legend>
                 <input type="text" id="app-url" name="app-url">
 
              </fieldset>
@@ -69,5 +74,6 @@
              
              <button type="submit" id="submit-button">Post Job</button>
         </form>
+        </div>
 </body>
 </html>
