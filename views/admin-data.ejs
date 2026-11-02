@@ -27,17 +27,22 @@
                 <th>Trade Area</th>
                 <th>Location</th>
                 <th>Part time or full time</th>
+                <th>Date Posted</th>
                 <th>Expiration Date</th>
-            </tr>
+                <th>Application URL</th>
+]            </tr>
         </thead>
         <tbody>
     <% jobs.forEach(job => { %>
         <tr>
-            <td><%= job.job %> <% order.job %></td>
-            <td><%= job.company %></td>
+            <td><%= job.job-title %> <% order.job %></td>
+            <td><%= job.company-name %></td>
+            <td><%= job.text %></td>
+            <td><%= job.trade-area %></td>
             <td><%= job.location %></td>
-            <td><%= job.time %></td>
-            <td><%= job.expiration %></td>
+            <td><%= job.button %></td>
+            <td><%= order.timestamp.toLocaleString() %></td>
+            <td><%= job.app-url %></td>
         </tr>
     <% }); %>
         </tbody>
