@@ -26,8 +26,10 @@
                  <div id = "fillout">
                  <span class="err" id="err-job-title">Job Title Required </span>
                 <legend for="job-title">Job Title:</legend>
-                <input type="text" id="job-title" name="job-title"> 
-                </div>
+
+                <input type="text" id="job-title" name="jobTitle"> 
+
+                <!-- <input type="text" id="job-title" name="job-title">  -->
                 
                 <!-- Company name -->
                 <div id = "fillout">
@@ -51,14 +53,13 @@
                 </div>
 
                 <!-- part or full time -->
-                 <div id = "fillout">
-                <legend for="part-time">
+                 <legend for="part-time">
                     <input type="radio" id="part-time" name="part-time" value="part-time">
-                    Part Time
-                </label>
-                <label for="full-time"
+                    Part TIme
+                 </legend>
+                <legend for="full-time"
                 >
-                <input type="radio" id="full-time" name="full-time" value="full-time">
+                <input type="radio" id="full-time" name="fullTime" value="fullTime">
                 Full Time
                 </legend>
                 </div>
@@ -68,21 +69,18 @@
                  <span class="err" id="err-date">Date Posted Required </span>
                 <legend for="text">Date posted</legend>
                 <input type="text" id="date-posted" name="date-posted">
-                </div>
 
                 <!-- date expires -->
                  <div id = "fillout">
                 <span class="err" id="err-exp">Expiration Date Required</span>
                 <legend for="text">Expiration date</legend>
                 <input type="text" id="exp-date" name="exp-date">
-                </div>
 
                 <!-- application url -->
                  <div id = "fillout">
                 <span class="err" id="err-app-url">Application URL Required </span>
                   <legend for="text">Application URL</legend>
                 <input type="text" id="app-url" name="app-url">
-                </div>
 
              </fieldset>
 

@@ -28,21 +28,22 @@
                 <th>Trade Area</th>
                 <th>Location</th>
                 <th>Part time or full time</th>
+                <th>Date Posted</th>
                 <th>Expiration Date</th>
-            </tr>
+                <th>Application URL</th>
+]            </tr>
         </thead>
         <tbody>
     <% jobs.forEach(job => { %>
         <tr>
-            <td><%= job.job-title %></td>
-            <td><%= job.company-name%></td>
-            <td><td><%= job.trade-area %></td></td>
+            <td><%= job.jobTitle %></td>
+            <td><%= job.companyName %></td>
+            <td><%= job.tradeArea %></td>
             <td><%= job.location %></td>
-            <td><%= job.part-time %></td>
-            <td><%= job.full-time %></td>
-            <td><%= job.date-posted %></td>
-            <td><%= job.exp-date %></td>
-            <td><%= job.app-url%></td>
+            <td><%= job.partTime %></td>
+            <td><%= job.fullTime %></td>
+            <td><%= job.datePosted %></td>
+            <td><%= job.expDate %></td>
         </tr>
     <% }); %>
         </tbody>
