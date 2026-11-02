@@ -10,7 +10,8 @@
     <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
-
+    <!--favicon-->
+    <link rel="icon" href="images/admin-favicon.png">
 </head>
 
 
@@ -31,11 +32,15 @@
         <tbody>
     <% jobs.forEach(job => { %>
         <tr>
-            <td><%= job.job %> <% order.job %></td>
-            <td><%= job.company %></td>
+            <td><%= job.job-title %></td>
+            <td><%= job.company-name%></td>
+            <td><td><%= job.trade-area %></td></td>
             <td><%= job.location %></td>
-            <td><%= job.time %></td>
-            <td><%= job.expiration %></td>
+            <td><%= job.part-time %></td>
+            <td><%= job.full-time %></td>
+            <td><%= job.date-posted %></td>
+            <td><%= job.exp-date %></td>
+            <td><%= job.app-url%></td>
         </tr>
     <% }); %>
         </tbody>
