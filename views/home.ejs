@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel = "stylesheet" href = "/styles/home-styles.css">
         <link rel="icon" href="images/favicon.png">
-
-        <title>Job Board</title>
-
     <link rel= "stylesheet" href= "styles/home-styles.css">
 
-    <script src="scripts/trades.js" defer></script>
+    <!-- <script src="scripts/trades.js" defer></script> -->
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script> <!--JQuery HAS TO COME FIRST!!!-->
+    <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+        <title>Job Board</title>
+
+
 </head>
 <body>
    <div id="main">
@@ -24,17 +28,39 @@
             </div>
         </div>
     </div>
-    <table>
-        <tr>
-            <th>Job Title</th>
-            <th>Company Name</th>
-            <th>Trade Area</th>
-            <th>Location</th>
-            <th>Part time or Full time </th>
-            <th>Expiration Date</th>
-        </tr>
+    <table id="home-table" class="display">
+        <thead>
+            <tr>
+                 <th>Job Title</th>
+                <th>Company</th>
+                <th>Trade Area</th>
+                <th>Location</th>
+                <th>Part time or full time</th>
+                <th>Date Posted</th>
+                <th>Expiration Date</th>
+                <th>Application URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% jobs.forEach(job => {%>
+            <tr>
+                <td><%= job.jobTitle %></td>
+                <td><%= job.companyName %></td>
+                <td><%= job.tradeArea %></td>
+                <td><%= job.location %></td>
+                <td><%= job.method %></td>
+                <td><%= job.datePosted %></td>
+                <td><%= job.expDate %></td>
+                <td><%= job.appUrl %></td>
+                </tr>
+            <%}); %>
+        </tbody>
     </table>
-   </div> 
+
+    <script>
+        new DataTable('#jobs-table');
+    </script>
+   
    <a href="/admin" id="admin-button">Admin Page</a>
 </body>
 </html>
