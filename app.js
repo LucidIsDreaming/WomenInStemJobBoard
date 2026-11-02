@@ -59,8 +59,13 @@ app.post('/submit-job', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-    res.send(jobs);
+        res.render('admin');
 });
+
+app.get('/admin-data', (req,res) => {
+    res.render('admin-data', {jobs});
+});
+
 
 // Start the server and listen on the specified port 
 app.listen(PORT, () => {
