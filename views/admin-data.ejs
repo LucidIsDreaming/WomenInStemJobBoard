@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Data</title>
+
+    <link rel="icon" href="images/favicon.png">
+    
+    <!-- Add data table resources -->
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script> <!--JQuery HAS TO COME FIRST!!!-->
+    <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+
+</head>
+
+
+<body>
+        <h1>Jobs Posted</h1>
+
+    <table id = "jobs-table" class = "display">
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Trade Area</th>
+                <th>Location</th>
+                <th>Part time or full time</th>
+                <th>Expiration Date</th>
+            </tr>
+        </thead>
+        <tbody>
+    <% jobs.forEach(job => { %>
+        <tr>
+            <td><%= job.job %> <% order.job %></td>
+            <td><%= job.company %></td>
+            <td><%= job.location %></td>
+            <td><%= job.time %></td>
+            <td><%= job.expiration %></td>
+        </tr>
+    <% }); %>
+        </tbody>
+    </table>
+
+    <script>
+        new DataTable('#jobs-table');
+    </script>
+
+    
+</body>
+</html>
