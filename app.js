@@ -12,6 +12,8 @@ const PORT = 3007;
 const jobs=[];
 app.use(express.urlencoded({ extended: true}));
 
+app.set('view engine', 'ejs');
+
 // Define a default "route" ('/')
 // req: contains information about the incoming request
 // res: allows us to send back a response to the client
