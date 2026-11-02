@@ -65,7 +65,7 @@ app.get('/admin', (req, res) => {
     res.render('admin');
 });
 
-app.get('/admin-data', (req,res) => {
+app.post('/admin-data', (req,res) => {
     res.render('admin-data', {jobs});
 });
 
