@@ -3,5 +3,11 @@
     display: none;
 }
 body{
-    background-color: green;
+    background-color: rgb(127, 210, 127);
+}
+
+fieldset {
+    border: 1px solid darkgreen;
+    padding: 1rem; 
+    margin-bottom: 1.25rem;
 }
