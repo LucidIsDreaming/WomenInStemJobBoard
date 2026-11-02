@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Log In</title>
     <link rel="icon" href="images/favicon.png">
-     <script src="scripts/trades.js" defer></script>
+    <script src="scripts/login.js" defer></script>
+    <link rel="stylesheet" href="styles/admin.css">
 </head>
 <body>
     <div id="main">
@@ -13,6 +14,7 @@
 
             <form id="log-in" action="/post-form" method="get">
             <h1>Administration Log In</h1>
+            
         </div>
         <fieldset>
             <legend>Log In</legend>
@@ -20,12 +22,13 @@
             <!-- User name -->
             <label for="username"> Username</label>
             <input type="text" id="username" name="username">
-
+            <span class="err" id="err-user">Username is Required </span>
             
 
             <!-- Password -->
             <label for="password"> Password</label>
             <input type="text" id="password" name="password">
+            <span class="err" id="err-password">Password is Required </span>
 
         </fieldset>
         

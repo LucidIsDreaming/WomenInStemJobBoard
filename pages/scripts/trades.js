@@ -1,3 +1,5 @@
+
+
 document.getElementById("job-form").onsubmit = () => {
 
     let isValid = true;
@@ -52,11 +54,10 @@ document.getElementById("job-form").onsubmit = () => {
         isValid = false;
     }
 
-
-
-
     return isValid;
 };
+
+
 
 function clearErrors() {
     let errors = document.getElementsByClassName("err");

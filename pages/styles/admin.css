@@ -3,6 +3,11 @@
 
 }
 
+.err{
+    color: darkred;
+    display: none;
+}
+
 #form-body{
      background-color: white;
     width:75%;
