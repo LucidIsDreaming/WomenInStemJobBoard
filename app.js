@@ -35,12 +35,12 @@ app.get('/post-form', (req, res) => {
 
 });
 
-app.get('/confirmation', (req, res) => {
+// app.get('/confirmation', (req, res) => {
 
 
-     res.render('confirmation');
+//      res.render('confirmation');
 
-});
+// });
 
 
 
