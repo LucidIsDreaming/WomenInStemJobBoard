@@ -3,13 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Admin Log In</title>
     <link rel="icon" href="images/favicon.png">
-
-    
-
-
+     <script src="scripts/trades.js" defer></script>
+</head>
 <body>
+    <div id="main">
+        <div id="header">
+
+            <form id="log-in" action="/post-form" method="get">
+            <h1>Administration Log In</h1>
+        </div>
+        <fieldset>
+            <legend>Log In</legend>
+
+            <!-- User name -->
+            <label for="username"> Username</label>
+            <input type="text" id="username" name="username">
+
+            
+
+            <!-- Password -->
+            <label for="password"> Password</label>
+            <input type="text" id="password" name="password">
+
+        </fieldset>
         
+        <button type="submit" id="log-in-button">Log In</button>
+        
+    </div>
+    </form>
 </body>
 </html>
