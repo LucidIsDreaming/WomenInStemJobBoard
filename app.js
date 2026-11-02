@@ -44,6 +44,9 @@ app.get('/confirmation', (req, res) => {
 
 
 
+
+
+
 app.post('/submit-job', (req, res) => {
     console.log(req.body);
     const job = req.body;
@@ -59,7 +62,7 @@ app.post('/submit-job', (req, res) => {
 });
 
 app.get('/admin', (req, res) => {
-        res.render('admin');
+    res.render('admin');
 });
 
 app.get('/admin-data', (req,res) => {
