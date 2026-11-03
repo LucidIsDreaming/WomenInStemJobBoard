@@ -51,7 +51,7 @@
                 <td><%= job.method %></td>
                 <td><%= job.datePosted %></td>
                 <td><%= job.expDate %></td>
-                <td><%= job.appUrl %></td>
+                <td><a href="<%= job.appUrl %>">Apply</a></td>              
                 </tr>
             <%}); %>
         </tbody>
@@ -64,3 +64,4 @@
    <a href="/admin" id="admin-button">Admin Page</a>
 </body>
 </html>
+
