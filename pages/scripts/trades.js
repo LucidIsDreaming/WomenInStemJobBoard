@@ -2,7 +2,7 @@
 
 document.getElementById("job-form").onsubmit = () => {
 
-    let isValid = true;
+    
 
     clearErrors();
 
@@ -29,12 +29,18 @@ document.getElementById("job-form").onsubmit = () => {
         document.getElementById("err-location").style.display = "block";
         isValid = false;
     }
+    let typeSelected = false;
+    let job_type = document.getElementsByName("method");
+    for(let i = 0; i < job_type; i++){
+        if(job_type[i].checked){
+        typeSelected = true;
+        }
+    }
 
-    /*let job_type = document.getElementById("part-or-full").value.trim();
-    if (job_type === "") {
-        document.getElementById("err-job-type").style.display = "block";
+    if(!typeSelected){
+        document.getElementById("err-type").style.display = "block";
         isValid = false;
-    }*/
+    }
 
     let date = document.getElementById("date-posted").value.trim();
     if (date === "") {

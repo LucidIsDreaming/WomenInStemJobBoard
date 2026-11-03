@@ -59,15 +59,12 @@
 
                 <!-- part or full time -->
                  <div id = "fillout">
-                <legend for="part-time">
-                    <input type="radio" id="part-time" name="method" value="partTime">
-                    Part Time
-                </label>
-                <label for="full-time"
-                >
+                <label for="part-time">Part Time</label>
+                <input type="radio" id="part-time" name="method" value="partTime">
+                
+                <label for="full-time">Full Time</label>
                 <input type="radio" id="full-time" name="method" value="fullTime">
-                Full Time
-                </legend>
+                <span class="err" id="err-type">Part or Full time Required</span>
                 </div>
                 </div>
 
@@ -94,9 +91,6 @@
                 <input type="text" id="app-url" name="appUrl">
 
              </fieldset>
-
-            
-             
              <button type="submit" id="submit-button">Post Job</button>
         </form>
         </div>
