@@ -2,8 +2,7 @@
 
 document.getElementById("job-form").onsubmit = () => {
 
-    
-
+    let isValid = true;
     clearErrors();
 
     let job_title = document.getElementById("job-title").value.trim();
@@ -31,7 +30,7 @@ document.getElementById("job-form").onsubmit = () => {
     }
     let typeSelected = false;
     let job_type = document.getElementsByName("method");
-    for(let i = 0; i < job_type; i++){
+    for(let i = 0; i < job_type.length; i++){
         if(job_type[i].checked){
         typeSelected = true;
         }
@@ -61,6 +60,8 @@ document.getElementById("job-form").onsubmit = () => {
     }
 
     return isValid;
+
+
 };
 
 

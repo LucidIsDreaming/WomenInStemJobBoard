@@ -13,7 +13,7 @@
      box-shadow: 2px 2px 5px darkgrey;
 }
 
-.fieldset legend{
+#timeType{
     font-size: 20px;
     font-weight: 600px;
 }
@@ -62,7 +62,7 @@ input[type="text"],select{
     align-items: center;
 }
 
-#fillout {
+fieldset .fillout, #timeType {
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
