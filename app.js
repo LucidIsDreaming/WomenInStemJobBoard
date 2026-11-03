@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 // res: allows us to send back a response to the client
 app.get('/', (req, res) => {
 
-res.render('home');
+res.render('home', {jobs});
 
 
    
