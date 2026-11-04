@@ -46,6 +46,25 @@ background-color: white;
   color: black;
 }
 
+#apply-button{
+  background-color: green;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  display:inline-block;
+}
+
+#button-td{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    
+}
 
 
 table {
@@ -55,9 +74,22 @@ table {
   width: 100%;
 }
 
-th {
+
+th, td {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
+#admin-button{
+    background-color: green;
+  color:white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  align-items: center;
+  display:inline-block;
+}

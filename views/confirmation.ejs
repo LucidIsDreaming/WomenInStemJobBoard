@@ -4,29 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/favicon.png">
-    <title>Document</title>
-
-    <link rel="icon" href="images/favicon.png">
+    <title>Confirmation</title>  
+    <!-- <script src="scripts/trades.js" defer></script> -->
+    <!-- Add data table resources -->
+    <script src = "https://code.jquery.com/jquery-3.7.1.js"></script> <!--JQuery HAS TO COME FIRST!!!-->
+    <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
+    
+    
+    
 </head>
 <body>
     <h>Job Posted!</h>
 
-    
-  <p>Job Title: <%= job.jobTitle %></p>
-    <p>Company: <%= job.companyName %></p>
-    <p>Trade Area: <%= job.tradeArea %></p>
-    <p>Location: <%= job.location %></p>
-    <p>Part time or Full time: <%= job.method %></p>
-    
+    <table id="confirm-table" class="display">
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>Trade Area</th>
+                <th>Location</th>
+                <th>Part time or Full time</th>
+                <th>Date Posted</th>
+                <th>Expiration Date</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            <td><%= job.jobTitle %></td>
+            <td><%= job.companyName %></td>
+            <td><%= job.tradeArea %></td>
+            <td><%= job.location %></td>
+            <td><%= job.method %></td>
+            <td><%= job.datePosted %></td>
+            <td><%= job.expDate %></td>
+            <td><%= job.appUrl %></td>
+           </tr> 
+        </tbody>
+    </table>
 
-    <p>Date Posted: <%= job.datePosted %></p>
-    <p>Expiration Date: <%= job.expDate %></p>
+        <script>
+        new DataTable('#confrim-table');
+    </script>
 
-    <p>URL: <%= job.appUrl %></p>
-   
-
-    <a href="/" class = "main-button">Back to Home Page</a>
+     <a href="/" class = "main-button">Back to Home Page</a>
     <a href="/admin-data" class = "admin-data-button">See Recent Admin Data</a>
-
 </body>
 </html>
