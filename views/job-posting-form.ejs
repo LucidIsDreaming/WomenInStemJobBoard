@@ -1,88 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post a Job</title>
-    <link rel="stylesheet" href="styles/post-form.css">
-    <script src="scripts/trades.js" defer></script>
 
-    <link rel="icon" href="images/favicon.png">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job</title>
+  <link rel="stylesheet" href="styles/post-form.css">
+  <script src="scripts/trades.js" defer></script>
+
+  <link rel="icon" href="images/favicon.png">
 
 </head>
+
 <body>
-                <form id="job-form" action="/submit-job" method="post">
-                   
+  <form id="job-form" action="/submit-job" method="post">
 
-                   
 
-            <!-- contact info -->
-             <div id="form-body">
-             <fieldset>
-                 
-                <legend>Create a job Post</legend>
-                
-                <!-- job title -->
-               
-                 <span class="err" id="err-job-title">Job Title Required </span>
-                <label for="job-title">Job Title:</label>
-                <input type="text" id="job-title" name="jobTitle"> 
-                
-                <!-- Company name -->
-                
-                <span class="err" id="err-company-name">Company Name Required</span>
-                <label for="company-name">Company Name:</label>
-                <input type="text" id="company-name" name="companyName">
-               
-                
-                <!-- Trade area -->
-                 
-                <span class="err" id="err-trade-area">Trade Program Required </span>
-                <label for="trade-area">Trade Area</label>
-                <input type="text" id="trade-area" name="tradeArea">
-                
 
-                <!-- location -->
-                
-                <span class="err" id="err-location">Location Required</span>
-                <label for="location">Location</label>
-                <input type="text" id="location" name="location">
-                
 
-                <!-- part or full time -->
-                
-                <label for="part-time">Part Time</label>
-                <input type="radio" id="part-time" name="method" value="partTime">
-                
-                <label for="full-time">Full Time</label>
-                <input type="radio" id="full-time" name="method" value="fullTime">
-                <span class="err" id="err-type">Part or Full time Required</span>
-                
-                
+    <!-- contact info -->
+    <div id="form-body">
+      <fieldset>
 
-                <!-- date posted -->
-                 
-                 <span class="err" id="err-date">Date Posted Required </span>
-                <label for="date-posted">Date posted</label>
-                <input type="text" id="date-posted" name="datePosted">
-                
+        <legend>Create a job Post</legend>
 
-                <!-- date expires -->
-                 
-                <span class="err" id="err-exp">Expiration Date Required</span>
-                <label for="exp-date">Expiration date</label>
-                <input type="text" id="exp-date" name="expDate">
+        <!-- job title -->
+        <div class="inputs">
+          <span class="err" id="err-job-title">Job Title Required </span>
+          <label for="job-title">Job Title:</label>
+          <input type="text" id="job-title" name="jobTitle">
+        </div>
 
-                <!-- application url -->
-                 
-                <span class="err" id="err-app-url">Application URL Required </span>
-                  <label for="app-url">Application URL</label>
-                <input type="text" id="app-url" name="appUrl">
-                 
-             <button type="submit" id="submit-button">Post Job</button>
-                </fieldset>
-                </div>
-            </form>
-        
+        <!-- Company name -->
+        <div class="inputs">
+          <span class="err" id="err-company-name">Company Name Required</span>
+          <label for="company-name">Company Name:</label>
+          <input type="text" id="company-name" name="companyName">
+        </div>
+
+        <!-- Trade area -->
+        <div class="inputs">
+          <span class="err" id="err-trade-area">Trade Program Required </span>
+          <label for="trade-area">Trade Area</label>
+          <input type="text" id="trade-area" name="tradeArea">
+        </div>
+
+        <!-- location -->
+        <div class="inputs">
+          <span class="err" id="err-location">Location Required</span>
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location">
+        </div>
+
+        <!-- part or full time -->
+        <div class="inputs">
+          <span class="err" id="err-type">Part or Full time Required</span>
+          <label for="part-time">Part Time</label>
+          <input type="radio" id="part-time" name="method" value="partTime">
+
+          <label for="full-time">Full Time</label>
+          <input type="radio" id="full-time" name="method" value="fullTime">
+        </div>
+
+
+
+        <!-- date posted -->
+        <div class="inputs">
+          <span class="err" id="err-date">Date Posted Required </span>
+          <label for="date-posted">Date posted</label>
+          <input type="text" id="date-posted" name="datePosted">
+        </div>
+
+        <!-- date expires -->
+        <div class="inputs">
+          <span class="err" id="err-exp">Expiration Date Required</span>
+          <label for="exp-date">Expiration date</label>
+          <input type="text" id="exp-date" name="expDate">
+        </div>
+
+        <!-- application url -->
+        <div class="inputs">
+          <span class="err" id="err-app-url">Application URL Required </span>
+          <label for="app-url">Application URL</label>
+          <input type="text" id="app-url" name="appUrl">
+        </div>
+
+        <button type="submit" id="submit-button">Post Job</button>
+      </fieldset>
+    </div>
+  </form>
+
 </body>
+
 </html>
