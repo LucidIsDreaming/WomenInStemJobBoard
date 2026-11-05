@@ -3,7 +3,6 @@
 document.getElementById("job-form").onsubmit = () => {
 
     let isValid = true;
-
     clearErrors();
 
     let job_title = document.getElementById("job-title").value.trim();
@@ -18,23 +17,35 @@ document.getElementById("job-form").onsubmit = () => {
         isValid = false;
     }
 
-    let program = document.getElementById("trade-area").value.trim();
-    if (program === "") {
-        document.getElementById("err-trade-area").style.display = "block";
-        isValid = false;
-    }
+    // let program = document.getElementById("trade-area").value.trim();
+    // if (program === "") {
+    //     document.getElementById("err-trade-area").style.display = "block";
+    //     isValid = false;
+    // }
+    
+    let program=document.getElementById("trade-area").value;
+if(program == "none"){
+    document.getElementById("err-trade-area").style.display="block";
+    isValid=false;
+}
 
     let job_location = document.getElementById("location").value.trim();
     if (job_location === "") {
         document.getElementById("err-location").style.display = "block";
         isValid = false;
     }
+    let typeSelected = false;
+    let job_type = document.getElementsByName("method");
+    for(let i = 0; i < job_type.length; i++){
+        if(job_type[i].checked){
+        typeSelected = true;
+        }
+    }
 
-    /*let job_type = document.getElementById("part-or-full").value.trim();
-    if (job_type === "") {
-        document.getElementById("err-job-type").style.display = "block";
+    if(!typeSelected){
+        document.getElementById("err-type").style.display = "block";
         isValid = false;
-    }*/
+    }
 
     let date = document.getElementById("date-posted").value.trim();
     if (date === "") {
@@ -49,12 +60,14 @@ document.getElementById("job-form").onsubmit = () => {
     }
 
     let url = document.getElementById("app-url").value.trim();
-    if (url === "") {
-        document.getElementById("err-app-url").style.display = "block";
-        isValid = false;
-    }
+   if (url === "" || !url.startsWith("https://")) {
+    document.getElementById("err-app-url").style.display = "block";
+    isValid = false;
+}
 
     return isValid;
+
+
 };
 
 

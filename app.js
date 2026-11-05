@@ -19,7 +19,7 @@ app.set('view engine', 'ejs');
 // res: allows us to send back a response to the client
 app.get('/', (req, res) => {
 
-res.render('home');
+res.render('home', {jobs});
 
 
    
@@ -50,7 +50,7 @@ app.get('/post-form', (req, res) => {
 app.post('/submit-job', (req, res) => {
     console.log(req.body);
     const job = req.body;
-   // job['timestamp'] = new Date();
+   job['timestamp'] = new Date();
     console.log(job);
    
    jobs.push(job);
