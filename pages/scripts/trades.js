@@ -17,11 +17,17 @@ document.getElementById("job-form").onsubmit = () => {
         isValid = false;
     }
 
-    let program = document.getElementById("trade-area").value.trim();
-    if (program === "") {
-        document.getElementById("err-trade-area").style.display = "block";
-        isValid = false;
-    }
+    // let program = document.getElementById("trade-area").value.trim();
+    // if (program === "") {
+    //     document.getElementById("err-trade-area").style.display = "block";
+    //     isValid = false;
+    // }
+    
+    let program=document.getElementById("trade-area").value;
+if(program == "none"){
+    document.getElementById("err-trade-area").style.display="block";
+    isValid=false;
+}
 
     let job_location = document.getElementById("location").value.trim();
     if (job_location === "") {
@@ -54,10 +60,10 @@ document.getElementById("job-form").onsubmit = () => {
     }
 
     let url = document.getElementById("app-url").value.trim();
-    if (url === "") {
-        document.getElementById("err-app-url").style.display = "block";
-        isValid = false;
-    }
+   if (url === "" || !url.startsWith("https://")) {
+    document.getElementById("err-app-url").style.display = "block";
+    isValid = false;
+}
 
     return isValid;
 

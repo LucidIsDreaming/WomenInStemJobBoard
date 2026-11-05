@@ -42,6 +42,30 @@
             </tr>
         </thead>
         <tbody>
+
+             <tr>
+                <td>Mechanic I, Vehicle Maintenance</td>
+                <td>Crystal Mountain</td>
+                <td>Automotive</td>
+                <td>Enumclaw, WA</td>
+                <td>Full time</td>
+                <td>2026-10-01</td>
+                <td>N/A</td>
+                <td id="button-td"><a href="https://alterra.wd1.myworkdayjobs.com/en-US/CrystalMountain/job/Mechanic-I--Vehicle-Maintenance_JR134594?source=CareerSite&_gl=1*334yzx*_ga*MTI0ODcwMDQ2NS4xNzkzODQ4Mzc2*_ga_756V9GY6NW*czE3OTM4NDgzNzYkbzEkZzAkdDE3OTM4NDgzNzgkajU4JGwwJGgw*_gcl_au*ODUyNTIxMTY4LjE3OTM4NDgzNzY." id="apply-button" target="_blank">Apply</a></td>
+            </tr>
+
+            <tr>
+                <td>General Service Technician</td>
+                <td>JiffyLube</td>
+                <td>Automotive</td>
+                <td>Seattle, WA</td>
+                <td>Full time</td>
+                <td>2026-11-04</td>
+                <td>N/A</td>
+                <td id="button-td"><a href="https://teamcarcare.wd1.myworkdayjobs.com/en-US/External/job/Seattle%2C-Washington/General-Service-Technician_JR114759" id="apply-button" target="_blank">Apply</a></td>
+            </tr>
+
+           
             <% jobs.forEach(job => {%>
             <tr>
                 <td><%= job.jobTitle %></td>
@@ -51,7 +75,7 @@
                 <td><%= job.method %></td>
                 <td><%= job.datePosted %></td>
                 <td><%= job.expDate %></td>
-                <td id="button-td"><a href="<%= job.appUrl %>" id="apply-button">Apply</a></td>              
+                <td id="button-td"><a href="<%= job.appUrl %>" target="_blank" id="apply-button">Apply</a></td>              
                 </tr>
             <%}); %>
         </tbody>
