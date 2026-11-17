@@ -33,9 +33,7 @@ app.get('/', (req, res) => {
 
 res.render('home', {jobs});
 
-
-   
-
+ 
     //res.send('Job Board Description');
 
 });
