@@ -15,7 +15,7 @@
 <body>
     <h>Job Posted!</h>
 
-    <table id="confirm-table" class="display">
+    <table id="confirm-table" class="display" style="width: 100%">
         <thead>
             <tr>
                 <th>Job Title</th>
@@ -23,6 +23,7 @@
                 <th>Trade Area</th>
                 <th>Location</th>
                 <th>Part time or Full time</th>
+                <th>Internship</th>
                 <th>Date Posted</th>
                 <th>Expiration Date</th>
                 <th>URL</th>
@@ -35,6 +36,7 @@
             <td><%= job.tradeArea %></td>
             <td><%= job.location %></td>
             <td><%= job.method %></td>
+            <td><%=job.internMethod %></td>
             <td><%= job.datePosted %></td>
             <td><%= job.expDate %></td>
             <td><%= job.appUrl %></td>
@@ -43,7 +45,11 @@
     </table>
 
         <script>
-        new DataTable('#confirm-table');
+        new DataTable('#confirm-table',  
+        {
+            responsive: true
+
+        });
     </script>
 
      <a href="/" class = "main-button">Back to Home Page</a>
