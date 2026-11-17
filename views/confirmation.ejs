@@ -15,7 +15,7 @@
 <body>
     <h>Job Posted!</h>
 
-    <table id="confirm-table" class="display">
+    <table id="confirm-table" class="display" style="width: 100%">
         <thead>
             <tr>
                 <th>Job Title</th>
@@ -43,7 +43,11 @@
     </table>
 
         <script>
-        new DataTable('#confirm-table');
+        new DataTable('#confirm-table',  
+        {
+            responsive: true
+
+        });
     </script>
 
      <a href="/" class = "main-button">Back to Home Page</a>
