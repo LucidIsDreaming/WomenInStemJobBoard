@@ -28,6 +28,7 @@
                 <th>Date Posted</th>
                 <th>Expiration Date</th>
                 <th>Application URL</th>
+                
 ]            </tr>
         </thead>
         <tbody>
@@ -39,9 +40,10 @@
             <td><%= job.location %></td>
             <td><%= job.method %></td>
             <td><%= job.internMethod %></td>
-            <td><%= job.datePosted %></td>
-            <td><%= job.expDate %></td>
+            <td><%= job.datePosted.toLocaleString() %></td>
+            <td><%= job.expDate.toLocaleString() %></td>
             <td><%= job.appUrl %></td>
+            
         </tr>
     <% }); %>
         </tbody>
