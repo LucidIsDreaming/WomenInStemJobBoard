@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(220, 255, 221);
+  background-color: rgb(34, 74, 68);
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -22,8 +22,7 @@ background-color: white;
 }
 
 .image-layer h1, .image-layer h3 {
-  color:black;
-  margin-right: 20px;
+  color:white;
 }
 
 .background {
@@ -34,15 +33,14 @@ background-color: white;
 
 .logo{
   position: absolute;
-  left: 150px;
+  left: 30px;
   top: 5px;
-  left: 90px;
 }
 
 .text-layer {
   position: absolute;
   top: 175px;
-  left: 100px;
+  left: 20px;
   color: black;
 }
 
