@@ -22,6 +22,9 @@
             <h1>Trades</h1>
             <h3>Job Board</h3>
             </div>
+            <div>
+                 <p><a href="https://www.greenriver.edu/students/academics/areas-of-interest/program-maps/trades-industrial-tech-aviation-natural-resources/index.html" target="_blank" id="grc-button">GRC Trades</a></p>
+            </div>
         </div>
     </div>
     <table id="home-table" class="display">
@@ -75,8 +78,9 @@
                 <td><%= job.internMethod %></td>
                 <td><%= job.datePosted %></td>
                 <td><%= job.expDate %></td>
-                <td id="button-td"><a href="<%= job.appUrl %>" target="_blank" id="apply-button">Apply</a></td>              
+                <td id="button-td"><a href="<%= job.appUrl %>" target="_blank" id="apply-button">Apply</a></td>             
                 </tr>
+                
             <%}); %>
         </tbody>
     </table>
