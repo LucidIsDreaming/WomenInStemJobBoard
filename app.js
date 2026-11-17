@@ -29,9 +29,22 @@ app.set('view engine', 'ejs');
 // Define a default "route" ('/')
 // req: contains information about the incoming request
 // res: allows us to send back a response to the client
-app.get('/', (req, res) => {
+app.get('/', async(req, res) => {
+try {
+        // Fetch all orders from the database, newest first
+    const jobs =  await pool.query('SELECT * FROM jobs ORDER BY timestamp DESC');
+	console.log(jobs[0]);
+    res.render('home', {jobs: jobs[0]});
 
-res.render('home', {jobs});
+
+
+    } catch(err) {
+
+
+        console.error('Database error:', err);
+        res.status(500).send('Database error: ' + err.message);
+    }
+
 
  
     //res.send('Job Board Description');
