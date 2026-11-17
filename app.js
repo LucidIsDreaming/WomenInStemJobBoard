@@ -1,5 +1,17 @@
 // Import the express module
 import express from 'express';
+import mysql2 from 'mysql2';
+import dotenv from 'dotenv';
+
+dotenv. config();
+
+const pool= mysql2.createPool({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
+    port: process.env.DB_PORT
+ }).promise();
 
 // Create an instance of an Express application
 const app = express();
@@ -47,14 +59,32 @@ app.get('/post-form', (req, res) => {
 
 
 
-app.post('/submit-job', (req, res) => {
-    console.log(req.body);
+app.post('/submit-job', async(req, res) => {
+    //console.log(req.body);
     const job = req.body;
    job['timestamp'] = new Date();
     console.log(job);
    
-   jobs.push(job);
+   //jobs.push(job);
+
+   const sql = `INSERT INTO jobs (jobTitle, companyName, tradeArea, location, method, internMethod, 
+   datePosted, expDate, appUrl)
+   VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+//CREATE AN ARRAY OD PARAMETERS FROM ORDER DATA
+const params =[
+    job.jobTitle,
+    job.companyName,
+    job.tradeArea,
+    job.location,
+    job.method,
+    job.internMethod,
+    job.datePosted,
+    job.expDate,
+    job.appUrl
+];
    
+const [result] = await pool.execute(sql, params);
 
    //Display confirmation page
    res.render('confirmation',{job});
@@ -65,8 +95,16 @@ app.get('/admin', (req, res) => {
     res.render('admin');
 });
 
-app.get('/admin-data', (req,res) => {
-    res.render('admin-data', {jobs});
+app.get('/admin-data', async(req,res) => {
+    try{
+        const [jobs]= await pool.query('SELECT * FROM jobs');
+        console.log(jobs);
+        res.render('admin-data', {jobs});
+    } catch(err){
+        console.error('Database error: ', err);
+        res.status(500).send('Database error occured.');
+    }
+    
 });
 
 
