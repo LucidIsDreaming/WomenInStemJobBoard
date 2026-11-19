@@ -16,18 +16,12 @@ document.getElementById("job-form").onsubmit = () => {
         document.getElementById("err-company-name").style.display = "block";
         isValid = false;
     }
-
-    // let program = document.getElementById("trade-area").value.trim();
-    // if (program === "") {
-    //     document.getElementById("err-trade-area").style.display = "block";
-    //     isValid = false;
-    // }
     
-    let program=document.getElementById("trade-area").value;
-if(program == "none"){
-    document.getElementById("err-trade-area").style.display="block";
-    isValid=false;
-}
+    let program = document.getElementById("trade-area").value;
+    if(program == "none"){
+        document.getElementById("err-trade-area").style.display="block";
+        isValid=false;
+    }
 
     let job_location = document.getElementById("location").value.trim();
     if (job_location === "") {
@@ -46,6 +40,12 @@ if(program == "none"){
         document.getElementById("err-type").style.display = "block";
         isValid = false;
     }
+
+    if(!typeSelected){
+        document.getElementById("err-internship").style.display = "block";
+        isValid = false;
+    }
+
 
     let date = document.getElementById("date-posted").value.trim();
     if (date === "") {
