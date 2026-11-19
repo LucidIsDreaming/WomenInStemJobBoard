@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    < <%- include("partials/head.ejs") %>
+     <%- include("partials/head.ejs") %>
     
     <!-- Add data table resources -->
     <script src = "https://code.jquery.com/jquery-3.7.1.js"></script> <!--JQuery HAS TO COME FIRST!!!-->
     <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
+     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/4.1.1/css/responsive.dataTables.min.css">
+
+<script src="https://cdn.datatables.net/responsive/4.1.1/js/dataTables.responsive.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
     <!--favicon-->
@@ -28,7 +31,7 @@
                 <th>Date Posted</th>
                 <th>Expiration Date</th>
                 <th>Application URL</th>
-]            </tr>
+            </tr>
         </thead>
         <tbody>
     <% jobs.forEach(job => { %>
@@ -48,7 +51,9 @@
     </table>
 
     <script>
-        new DataTable('#jobs-table');
+        new DataTable('#jobs-table',{
+            responsive:true
+        });
     </script>
 
     <a href="/" class = "main-button">Back to Job Postings</a>
