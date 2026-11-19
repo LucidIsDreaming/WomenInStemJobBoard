@@ -56,8 +56,8 @@
                 <td><%= job.location %></td>
                 <td><%= job.method %></td>
                 <td><%= job.internMethod %></td>
-                <td><%= job.datePosted %></td>
-                <td><%= job.expDate %></td>
+                <td><%= job.datePosted.toDateString() %></td>
+                <td><%= job.expDate.toDateString() %></td>
                 <td id="button-td"><a href="<%= job.appUrl %>" target="_blank" id="apply-button">Apply</a></td>             
                 </tr>
                 <%}%>
