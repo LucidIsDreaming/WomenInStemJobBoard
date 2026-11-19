@@ -1,4 +1,4 @@
-
+//validation for form 
 
 document.getElementById("job-form").onsubmit = () => {
 

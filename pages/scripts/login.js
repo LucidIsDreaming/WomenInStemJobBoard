@@ -1,3 +1,5 @@
+
+//validation for admin login page
 document.getElementById("log-in").onsubmit = () =>{
     let isValid = true;
     clearErrors();

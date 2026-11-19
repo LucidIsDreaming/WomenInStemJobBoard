@@ -46,9 +46,6 @@ try {
     }
 
 
- 
-    //res.send('Job Board Description');
-
 });
 
 app.get('/post-form', (req, res) => {
@@ -58,26 +55,11 @@ app.get('/post-form', (req, res) => {
 
 });
 
-// app.get('/confirmation', (req, res) => {
-
-
-//      res.render('confirmation');
-
-// });
-
-
-
-
-
 
 app.post('/submit-job', async(req, res) => {
-    //console.log(req.body);
     const job = req.body;
    job['timestamp'] = new Date();
     console.log(job);
-   
-   //jobs.push(job);
-
    const sql = `INSERT INTO jobs (jobTitle, companyName, tradeArea, location, method, internMethod, 
    datePosted, expDate, appUrl)
    VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)`;
