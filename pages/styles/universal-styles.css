@@ -10,4 +10,8 @@
         overflow-x: auto;
     }
 
+    .logo{
+        size: 10px;
+    }
+
 }

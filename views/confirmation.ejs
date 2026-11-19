@@ -8,7 +8,9 @@
     <script src = "https://cdn.datatables.net/3.1.4/js/dataTables.min.js"></script>
     <!--CSS-->
     <link rel="stylesheet" href="https://cdn.datatables.net/3.1.4/css/dataTables.dataTables.min.css">
-    
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/4.1.1/css/responsive.dataTables.min.css">
+
+<script src="https://cdn.datatables.net/responsive/4.1.1/js/dataTables.responsive.min.js"></script>
     
     
 </head>
@@ -47,8 +49,8 @@
         <script>
         new DataTable('#confirm-table',  
         {
-            responsive: true
-
+            responsive: true,
+            order: [[6, 'desc']]
         });
     </script>
 
