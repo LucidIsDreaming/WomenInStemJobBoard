@@ -20,7 +20,7 @@ app.use(express.static('pages'));
 
 
 // Define the port number where our server will listen
-const PORT = 3008;
+const PORT = 3007;
 const jobs=[];
 app.use(express.urlencoded({ extended: true}));
 
