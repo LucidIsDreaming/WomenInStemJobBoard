@@ -45,19 +45,25 @@
             </tr>
         </thead>
          <tbody>
-           
+            <% const today = new Date(); 
+            const threeDaysFromNow = new Date();
+            threeDaysFromNow.setDate(today.getDate() + 3);
+            %>
             <% jobs.forEach(job => {%>
-            <% const today = new Date(); %>
             <% if(job.expDate >= today) {%>
             <tr>
                 <td><%= job.jobTitle %></td>
-                <td><%= job.companyName %></td>
+                <td><%= job.companyName %> </td>
                 <td><%= job.tradeArea %></td>
                 <td><%= job.location %></td>
                 <td><%= job.method %></td>
                 <td><%= job.internMethod %></td>
                 <td><%= job.datePosted.toDateString() %></td>
-                <td><%= job.expDate.toDateString() %></td>
+                <td><%= job.expDate.toDateString() %>
+                <% if (job.expDate <= threeDaysFromNow) { %>
+                    <span class="exp-soon">Expiring Soon!</span>
+                <% } %>
+                </td>
                 <td id="button-td"><a href="<%= job.appUrl %>" target="_blank" id="apply-button">Apply</a></td>             
                 </tr>
                 <%}%>
